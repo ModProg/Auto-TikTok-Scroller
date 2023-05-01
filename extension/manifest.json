@@ -1,14 +1,21 @@
 {
   "manifest_version": 3,
   "name": "Auto TikTok Scroller",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "content_scripts": [
     {
-      "matches": ["https://www.tiktok.com/*"],
-      "js": ["./dist/content.js"]
+      "matches": [
+        "https://www.tiktok.com/*"
+      ],
+      "js": [
+        "./dist/content.js"
+      ]
     }
   ],
-  "permissions": ["tabs", "storage"],
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
   "icons": {
     "16": "./img/tiktokIcon16.png",
     "48": "./img/tiktokIcon48.png",
@@ -19,5 +26,11 @@
     "default_icon": "./img/tiktokPopupIcon.png",
     "default_title": "Start scrolling!"
   },
-  "description": "Auto TikTok Scroller is a helpful tool to automatically scroll to the next TikTok when one ends."
+  "description": "Auto TikTok Scroller is a helpful tool to automatically scroll to the next TikTok when one ends.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tiktok-scroller@modprog.de",
+      "strict_min_version": "109.0"
+    }
+  }
 }
